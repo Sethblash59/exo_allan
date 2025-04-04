@@ -99,7 +99,6 @@ main {
 }
 .gantn img{
     width: 65%;
-    height: 100%;
     margin-top: 2rem;
 }
 .reducn{
@@ -174,6 +173,8 @@ width: 100%;
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    justify-items: center;
+    position:sticky
 
     
 }
@@ -182,6 +183,7 @@ width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-content: center;
     background-color: white;
     width: 80%;
     border-radius: 10px;
@@ -191,7 +193,7 @@ width: 100%;
     bottom:-25px;
     left: 12%;
     text-align: center;
-    
+    box-shadow: 0px 2px 3px var(--couleur-fond-fonce);
 }
 
 .abso{
@@ -209,7 +211,6 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: solid 1px var(--couleur-fond-claire);
     padding-top: 3rem;
 }
 
@@ -235,12 +236,17 @@ footer{
 }
 
 .reseau {
+    border-top: solid 1px var(--couleur-fond-claire);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
 
@@ -253,4 +259,79 @@ footer p{
     width: 100%;
     padding-bottom: 1rem;
     padding-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+
+    header img{
+        width: 60%;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 0.2rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .gants {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 100%;
+    }
+    .prixvente2 {
+        margin-bottom: 2rem;
+    }
+    .produits {
+        padding-bottom: 3rem;
+    }
+    .partie2_1 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        flex-wrap: wrap;    
+        padding: 2rem 4rem 0rem 4rem; 
+    }
+    main {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .nav2 {
+        width: 50%;
+        left: 25%;
+        height: 75%;
+    }
+    .nav2 ul {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        align-self: center;    
+        height: 25%;
+        margin-top: 8%;
+
+    }
+    .hello {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: end;
+        padding-top: 5%;
+        font-size: 0.9rem;
+    }
+    .title {
+        grid-column: 1;
+    }
+
+    .navbar {
+       margin-bottom: 0;
+       padding-bottom: 1rem;
+       align-self:flex-end ;
+       padding-right:0;
+    }
+    .navbar a {
+        font-size: 0.8rem;   
+    }
+
 }
